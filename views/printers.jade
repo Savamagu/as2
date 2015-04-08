@@ -1,0 +1,27 @@
+block content
+    div
+        div  
+        h2 Printers Directory 
+        table
+            thead
+                th Name
+                th Logo
+                th Address
+                th Country
+                th Telephone
+                th Email
+                th Edit
+                th Delete
+            tbody
+                each Printer, i in printers
+                    tr
+                        td #{Printer.Name}
+                        td #{Printer.Logo}
+                        td #{Printer.Address}
+                        td #{Printer.Country}
+                        td #{Printer.Telephone}
+                        td #{Printer.Email}
+                        td 
+                            a(href='printers/edit/#{Printer._id}' title='Edit') Edit
+                        td
+                            a(href='printers/delete/#{Printer._id}' title='Delete' onclick='return confirm(\'Businesses can not be retreived after they are deleted. Are you sure you want to do this?\');') Delete

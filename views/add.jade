@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h2 Add a New Business
+    form(method='post', action='/printers/add')
+        Label Name
+        input(name='Name', required, placeholder='Name')
+        Label Logo
+        input(name='Logo', type='file', required, placeholder='Logo')
+        Label Address
+        input(name='Address', required, placeholder='Address')
+        Label Country
+        input(name='Country', required, placeholder='Country')
+        Label Telephone
+        input(name='Telephone', required, placeholder='Telephone')
+        Label Email
+        input(name='Email', required, placeholder='Email')
+        input(type='submit', value='Submit New Business')
